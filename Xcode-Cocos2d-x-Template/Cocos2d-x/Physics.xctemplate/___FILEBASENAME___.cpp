@@ -21,9 +21,12 @@ ___FILEBASENAMEASIDENTIFIER___::~___FILEBASENAMEASIDENTIFIER___()
 Scene* ___FILEBASENAMEASIDENTIFIER___::createScene()
 {
     // 'scene' is an autorelease object
-    auto scene = Scene::create();
+    auto scene = Scene::createWithPhysics();
+    //scene->getPhysicsWorld()->setDebugDrawMask( PhysicsWorld::DEBUGDRAW_ALL );
     // 'layer' is an autorelease object
     auto layer = ___FILEBASENAMEASIDENTIFIER___::create();
+    
+    layer->setPhysicsWorld( scene->getPhysicsWorld());
     
     scene->addChild(layer);
     
@@ -38,11 +41,15 @@ bool ___FILEBASENAMEASIDENTIFIER___::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
     
-    //Welcome Message
-    auto windowSize = Director::getInstance()->getWinSize();
-    auto label = LabelTTF::create("___FILEBASENAMEASIDENTIFIER___", "Arial", 24);
-    label->setPosition(windowSize.width / 2, windowSize.height / 2);
-    this->addChild(label);
+    // Default Physics Engine chipmunk (or change Box2D)
+    auto edgeBody = PhysicsBody::createEdgeBox( visibleSize, PHYSICSBODY_MATERIAL_DEFAULT, 3);
+    // Create a static PhysicsBody
+    edgeBody->setDynamic(false);
+    // Create Physics 邊界
+    auto edgeNode = Node::create();
+    edgeNode->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    edgeNode->setPhysicsBody(edgeBody);
+    this->addChild(edgeNode);
     
     return true;
 }
