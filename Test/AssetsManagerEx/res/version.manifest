@@ -1,7 +1,7 @@
 {
-"packageUrl" : "http://192.168.1.11:8000/res",
-"remoteManifestUrl" : "http://192.168.1.11:8000/res/project.manifest",
-"remoteVersionUrl" : "http://192.168.1.11:8000/res/version.manifest",
-"version" : "1.0.1",
-"engineVersion" : "3.0 rc0"
+    "packageUrl" : "https://raw.githubusercontent.com/penyuanliao/StudyCocos2d/master/Test/AssetsManagerEx",
+    "remoteManifestUrl" : "https://raw.githubusercontent.com/penyuanliao/StudyCocos2d/master/Test/AssetsManagerEx/res/project.manifest",
+	"remoteVersionUrl" : "https://raw.githubusercontent.com/penyuanliao/StudyCocos2d/master/Test/AssetsManagerEx/res/version.manifest",
+	"version" : "1.0.1",
+	"engineVersion" : "3.0 rc0"
 }

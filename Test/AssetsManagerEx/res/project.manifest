@@ -1,15 +1,14 @@
 {
-    "packageUrl" : "http://192.168.1.11:8000/res",
-    "remoteManifestUrl" : "http://192.168.1.11:8000/res/project.manifest",
-    "remoteVersionUrl" : "http://192.168.1.11:8000/res/version.manifest",
+    "packageUrl" : "https://raw.githubusercontent.com/penyuanliao/StudyCocos2d/master/Test/AssetsManagerEx",
+    "remoteManifestUrl" : "https://raw.githubusercontent.com/penyuanliao/StudyCocos2d/master/Test/AssetsManagerEx/res/project.manifest",
+    "remoteVersionUrl" : "https://raw.githubusercontent.com/penyuanliao/StudyCocos2d/master/Test/AssetsManagerEx/res/version.manifest",
     "version" : "1.0.1",
     "engineVersion" : "3.0 rc0",
     "assets" :
     {
-        "src/app.zip" :
+        "src/app/views/mainScene.lua" :
         {
-            "md5" : "D07D260D8072F786A586A6A430D0E98B",
-            "compressed" : true
+            "md5" : "27f0ccbff50b3bb40174b0c6b7e533ce"
         }
     },
     "searchPaths" : []
